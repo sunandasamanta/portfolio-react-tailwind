@@ -1,9 +1,22 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillTwitterCircle, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai';
+import bakshi from '../public/image-me.png';
+import design from '../public/design.png';
+import code from '../public/code.png';
+import consulting from '../public/consulting.png';
+import web1 from '../public/web1.png';
+import web2 from '../public/web2.png';
+import web3 from '../public/web3.png';
+import web4 from '../public/web4.png';
+import web5 from '../public/web5.png';
+import web6 from '../public/web6.png';
+// import Quotes from '@/components/Quotes';
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -12,7 +25,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-white px-10'>
+      <main className='bg-white px-10 md:px-20 lg:px-40'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-xl font-burtons'>Bakshi_Codes</h1>
@@ -25,23 +38,98 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+          <div className='relative mt-12 flex mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 overflow-hidden'>
+            <Image src={bakshi} alt="bakshi" className='object-cover' priority/>
+          </div>
           <div className='text-center p-10'>
-            <h2>Bakshi</h2>
-            <h3>Front-End Developer!</h3>
-            <p>Whether it&#39;s a business or personal, a portfolio is a must in today&#39;s world!</p>
+            {/* tracking-wider */}
+            <h2 className='text-5xl py-3 text-teal-500 font-medium md:text-6xl'>Hi, I&#39;m Bakshi.</h2>
+            <h3 className='text-2xl md:text-3xl'>Freelance Front-End Developer!</h3>
+            <p className='text-md py-5 leading-5 text-gray-800 md:text-xl'>Whether it&#39;s a business or personal, a portfolio is a must in today&#39;s world.</p>
+            <p className='text-xl'><Link className='text-teal-500 font-bold hover:text-teal-800' href="mailto:samantasunanda724@gmail.com">Hire me</Link> today!</p>
+          </div>
+          <div className='text-5xl flex gap-16 justify-center text-gray-600'>
+            <Link href="https://github.com/sunandasamanta">
+              <AiFillGithub className='hover:text-black' />
+            </Link>
+            <Link href="https://www.instagram.com/bakshi_codes/">
+              <AiFillInstagram className='hover:text-black' />
+            </Link>
+            <Link href="https://www.linkedin.com/in/sunanda-samanta-047ba519b/">
+              <AiFillLinkedin className='hover:text-[#0A66C2]' />
+            </Link>
+          </div>
+          
+        </section>
+        <section>
+          <div>
+            <h3 className="text-3xl py-1">Services I offer</h3>
+            <p className="text-md py-2 leading-5 text-gray-800">
+              As a front-end developer besides HTML, Vanilla CSS and Vanilla JS, I have worked with different JS And CSS libraries and framework. Such as, <span className='text-teal-600'>React libray</span>, <span className='text-teal-600'>NextJS framework</span>, <span className='text-teal-600'>Tailwind</span>, <span className='text-teal-600'>Bootstrap</span>. I have built more than twenty responsive components, interactive web applications. I also have in-depth knowledge of <span className='text-teal-600'>Git</span> version control system.
+            </p>
+            <p className="text-md py-2 leading-5 text-gray-800">
+            I offer wide range of services, including responsive User-Interface design, Interactive User-Experience, a bucket of other attractive features based on client&#39;s requirement.
+            </p>
+          </div>
+          <div className="text-center shadow-xl p-10 rounded-xl">
+            <Image className='inline' src={design} width={100} height={100} alt="design" />
+            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+            <p className='py-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel minus aspernatur quo labore sint eum possimus provident rem voluptas dolore?</p>
+            <h4 className='text-teal-600 py-4'>Development tools I use</h4>
+            <p className='text-gray-800 py-1'>React</p>
+            <p className='text-gray-800 py-1'>NextJS</p>
+            <p className='text-gray-800 py-1'>Tailwind</p>
+            <p className='text-gray-800 py-1'>Bootstrap</p>
+          </div>
+          <div className="text-center shadow-xl p-10 rounded-xl">
+            <Image className='inline' src={code} width={100} height={100} alt="design" />
+            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+            <p className='py-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel minus aspernatur quo labore sint eum possimus provident rem voluptas dolore?</p>
+            <h4 className='text-teal-600 py-4'>Development tools I use</h4>
+            <p className='text-gray-800 py-1'>React</p>
+            <p className='text-gray-800 py-1'>NextJS</p>
+            <p className='text-gray-800 py-1'>Tailwind</p>
+            <p className='text-gray-800 py-1'>Bootstrap</p>
+          </div>
+          <div className="text-center shadow-xl p-10 mb-6 rounded-xl">
+            <Image className='inline' src={consulting} width={100} height={100} alt="design" />
+            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+            <p className='py-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel minus aspernatur quo labore sint eum possimus provident rem voluptas dolore?</p>
+            <h4 className='text-teal-600 py-4'>Development tools I use</h4>
+            <p className='text-gray-800 py-1'>React</p>
+            <p className='text-gray-800 py-1'>NextJS</p>
+            <p className='text-gray-800 py-1'>Tailwind</p>
+            <p className='text-gray-800 py-1'>Bootstrap</p>
+          </div>
+        </section>
+        <section className="">
+          <div className="">
+            <h3 className="text-3xl py-1">Portfolio</h3>
+            <p className="text-md py-2 leading-5 text-gray-800">
+              As a front-end developer besides HTML, Vanilla CSS and Vanilla JS, I have worked with different JS And CSS libraries and framework. Such as, <span className='text-teal-600'>React libray</span>, <span className='text-teal-600'>NextJS framework</span>, <span className='text-teal-600'>Tailwind</span>, <span className='text-teal-600'>Bootstrap</span>. I have built more than twenty responsive components, interactive web applications. I also have in-depth knowledge of <span className='text-teal-600'>Git</span> version control system.
+            </p>
+            <p className="text-md py-2 leading-5 text-gray-800">
+              I offer wide range of services, including responsive User-Interface design, Interactive User-Experience, a bucket of other attractive features based on client&#39;s requirement.
+            </p>
           </div>
           <div>
-            <Link href="#">
-              <AiFillTwitterCircle />
-            </Link>
-            <Link href="#">
-              <AiFillInstagram />
-            </Link>
-            <Link href="#">
-              <AiFillLinkedin />
-            </Link>
+            <Image src={web1} alt="web1"/>
           </div>
-          <div></div>
+          <div>
+            <Image src={web2} alt="web2"/>
+          </div>
+          <div>
+            <Image src={web3} alt="web1"/>
+          </div>
+          <div>
+            <Image src={web4} alt="web1"/>
+          </div>
+          <div>
+            <Image src={web5} alt="web1"/>
+          </div>
+          <div>
+            <Image src={web6} alt="web1"/>
+          </div>
         </section>
       </main>
     </>
